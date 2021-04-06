@@ -1,0 +1,68 @@
+.nav-link{
+    display: block;
+    padding: 0.5rem 0.3rem;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-item.show .nav-link{
+    color: #FFFFFF;
+    font-weight: bold ;
+    background-color: #417E9A ;
+    border-color: #417E9A #417E9A #fff ; 
+}
+
+.nav-tabs{
+    border-bottom: 1px solid #417E9a;
+}
+
+.nav-tabs .nav-link{
+    border: 1px solid #417E9A;
+    border-top-left-radius: 0.25rem;
+    border-top-right-radius: 0.25rem;
+    color: #000000;
+}
+
+.nav-tabs .nav-link:hover{
+    border-color: #417E9A #417e9a;
+}
+
+.border-left{
+    border-left: 1px solid #417E9A !important;
+}
+.border-right{
+    border-right: 1px solid #417E9A !important;
+}
+.border-top{
+    border-top: 1px solid #417E9A !important;
+}
+.border-bottom{
+    border-bottom: 1px solid #417E9A !important;
+}
+
+.btn:disabled{
+    cursor: not-allowed !important;
+}
+
+.rivus-btn{
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #417E9A;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #417E9A;
+    text-decoration: none;
+    font-size: 15px
+}
+
+.rivus-btn:hover{
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #95ADB1;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid #95ADB1;
+    text-decoration: none;
+    font-size: 15px
+}
+

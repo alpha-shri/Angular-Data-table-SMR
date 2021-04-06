@@ -1,0 +1,76 @@
+.table-head{
+    background-color: #417e9a;
+    color: #fff;
+}
+
+table {
+    width: 100%;
+  }
+
+th{
+    background-color: #417e9a;
+    color: #fff;
+}
+
+.mat-form-field {
+    font-size: 15px;
+    width: 40%;
+  }
+
+.filter-div{
+  display: flex;
+  
+  flex-direction: row-reverse;
+}
+
+.filter-control{
+  width: 30% !important
+}
+
+.rivus-btn{
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #417E9A;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #417E9A;
+  text-decoration: none;
+  font-size: 15px
+}
+
+.rivus-btn:hover{
+  margin-right: 10px;
+  padding: 5px 10px;
+  background-color: #95ADB1;
+  color: #ffffff;
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #95ADB1;
+  text-decoration: none;
+  font-size: 15px
+}
+
+.material-icons{
+  font-size: 26px !important;
+}
+
+.check-icon, .edit-icon{
+  color: #417E9A;
+  cursor: pointer
+}
+
+.check-icon:hover, .edit-icon:hover {
+  color: #95ADB1;
+  cursor: pointer
+}
+
+.delete-icon, .close-icon{
+  color: red;
+  cursor: pointer;
+}
+
+.mat-form-field-email{
+  width: 80% !important;
+}
+
