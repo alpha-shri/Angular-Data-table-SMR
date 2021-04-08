@@ -1,0 +1,25 @@
+.user-icon{
+    width: 40%;
+    height: 150px;
+}
+
+.mat-form-field-wrapper{
+    margin-left: 5% !important;
+}
+
+.mat-card-xid{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    width: 80%;
+    margin: 10%;
+    padding: 10px 20px;
+}
+
+.green-color{
+    color: #155724 !important;
+}
+.red-color{
+    color: red !important;
+}

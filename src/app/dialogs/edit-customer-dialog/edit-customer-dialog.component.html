@@ -1,0 +1,13 @@
+<div class="container edit-customer-div">
+    <label for=""><b>Update email address</b></label>
+    <mat-form-field appearance="legacy">
+        <mat-label>Enter email address</mat-label>
+        <input matInput placeholder="Enter email address"
+               [(ngModel)]="emailAddress" name="emailAddress"
+               id="emailAddress" autocomplete="off" />
+    </mat-form-field>
+    <div class="d-flex">
+        <button class="mr-2" mat-raised-button class="btn-rivus-color" (click)="updateEmail()">Update</button>
+        <button ngClass="ml-2" mat-raised-button class="btn-rivus-color" mat-dialog-close>Close</button>
+    </div>    
+</div>

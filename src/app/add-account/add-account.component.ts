@@ -2,23 +2,22 @@ import { Component, OnInit } from '@angular/core';
 import { Customer } from 'src/app/models/Customer';
 import {
   FormBuilder,
-  FormControl,
-  FormGroup,
   Validators,
 } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { CustomerService } from 'src/app/services/customer.service';
 
-@Component({
-  selector: 'app-dashboard',
-  templateUrl: './dashboard.component.html',
-  styleUrls: ['./dashboard.component.css'],
-})
-export class DashboardComponent implements OnInit {
-  // headaccountcode = "";
-  // ouccode = "";
-  // emailAddress = "";
 
+@Component({
+  selector: 'app-add-account',
+  templateUrl: './add-account.component.html',
+  styleUrls: ['./add-account.component.css']
+})
+export class AddAccountComponent implements OnInit {
+  
+  value = 'Clear me';
+
+  
   constructor(
     private service: CustomerService,
     private toastr: ToastrService,
@@ -47,7 +46,7 @@ export class DashboardComponent implements OnInit {
 
     this.service.addSmrCustomerService(this.customerForm.value)
         .subscribe( data => {
-          
+          this.customerForm.reset();
           this.service.fetchAllCustomerService();
           this.toastr.success("",data);
         });

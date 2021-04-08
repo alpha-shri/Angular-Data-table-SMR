@@ -1,0 +1,58 @@
+<div class="container pt-2 col-md-12">
+    <div class="row">
+        <div class="xid-card-div col-md-6">
+
+            <label class="col-md-2" for=""><b>XID <span class="red-color">*</span> </b></label>
+            <mat-form-field class="col-md-4" appearance="legacy">
+                <mat-label>Enter XID</mat-label>
+                <input matInput placeholder="Enter XID to search" [(ngModel)]="xidinput" />
+            </mat-form-field>
+            <div class="mt-2 mb-2">
+                <mat-error *ngIf="xidalert" class="alert alert-danger">XID is required</mat-error>
+            </div>
+            <div class="mt-2">
+                <button mat-raised-button (click)="lookUpXID()">Lookup</button>
+                <button class="ml-2" mat-raised-button (click)="resetXID()">Reset</button>
+            </div>
+            <div class=" mt-4">
+                <mat-card class="mat-card-xid" *ngIf="showXIDCard">
+                    <mat-card-header>
+                        <mat-card-title>
+                            <h2>User Details</h2>
+                        </mat-card-title>
+                    </mat-card-header>
+                    <img mat-card-image src="/assets/user-image.png" class="user-icon" alt="Photo of a Shiba Inu">
+                    <mat-card-content>
+                        <div class="firstname">
+                            <label for="" [(ngModel)]="username">
+                                <h2>{{ username }}</h2>
+                            </label>
+                        </div>
+                        <div class="companyname">
+                            <label for="" [(ngModel)]="companyname">
+                                <h3>Company: {{ companyname }}</h3>
+                            </label>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+
+            </div>
+        </div>
+        <div class="head-account-card-div col-md-6">
+            <label class="col-md-5" for=""><b>Head Account Code <span class="red-color">*</span> </b></label>
+            <mat-form-field class="col-md-7" appearance="legacy">
+                <mat-label>Head Account Code</mat-label>
+                <input matInput placeholder="Enter head account code" [(ngModel)]="headaccountcode" />
+                
+
+            </mat-form-field>
+            <div>
+                <mat-error *ngIf="hacalert" class="alert alert-danger">Head Account Code is required</mat-error>
+            </div>
+            <div>
+                <button class="mr-2" mat-raised-button class="mr-2" (click)="lookUpHAC()">Lookup</button>
+                <button *ngIf="linkXIDbtn" class="ml-2" mat-raised-button>Link XID</button>
+            </div>
+        </div>
+    </div>
+</div>

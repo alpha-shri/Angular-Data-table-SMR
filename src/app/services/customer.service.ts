@@ -14,7 +14,7 @@ export class CustomerService {
     {
       headaccountcode: "BP1234",
       ouccode: "BP6221",
-      emailAddress: "shrijeet.panda@rivusfleetsolutions.com"
+      emailAddress: "shrijeet.panda@rivusfleetsolutions.com, arko.pal@rivusfleetsolutions.com, sagnik.mukherjee@rivusfleetsolutions.com"
     },
     {
       headaccountcode: "QW1317",

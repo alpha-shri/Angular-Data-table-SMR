@@ -1,0 +1,15 @@
+.mat-button{
+    height: 50px;
+    width:400px
+}
+
+.mat-button-active{
+    color: #FFFFFF;
+    font-weight: bold ;
+    background-color: #417E9A ;
+    border-color: #417E9A #417E9A #fff ; 
+}
+
+.mat-toolbar{
+    background-color: #ffffff ; 
+}

@@ -1,0 +1,15 @@
+<div class="delete-customer-div">
+    <label for=""><b>Confirm to delete this record</b></label>
+    
+    <div class="d-flex">
+        <button mat-icon-button class="mr-2 icon-pack" (click)="deleteRecord()" [mat-dialog-close]="false"
+         aria-label="Example icon button with a home icon">
+            <mat-icon>check</mat-icon>
+        </button>
+        <button mat-icon-button class="ml-2 icon-pack" [mat-dialog-close]="false"
+                aria-label="Example icon button with a home icon">
+            <mat-icon>close</mat-icon>
+        </button>
+    </div>    
+</div>
+

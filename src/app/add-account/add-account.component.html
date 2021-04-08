@@ -1,0 +1,64 @@
+<div class="container pt-2">
+
+    <form [formGroup]="customerForm" (ngSubmit)="formSubmit()">
+        <div class="mt-4 add_user col-sm-12">
+            <div class="row">
+                <div class="head-account-code col-sm-4" style="display: grid">
+                    <label for=""><b>Head Account Code</b></label>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Head Account Code</mat-label>
+                        <input matInput placeholder="Enter head account code" formControlName="headaccountcode"
+                            name="headaccountcode" id="headaccountcode" />
+                       
+                    </mat-form-field>
+                    <div class="alert alert-danger"
+                        *ngIf="headaccountcode.invalid && (headaccountcode.touched && headaccountcode.dirty)">
+                        <span *ngIf="headaccountcode.errors.required">
+                            Head account code is <strong>required</strong>
+                        </span>
+                    </div>
+                    <!-- <input type="text" class="form-control" [(ngModel)]="headaccountcode"  name="accountcode" id="accountcode"> -->
+                </div>
+                <div class="ouc-code col-sm-4" style="display: grid">
+                    <label for=""><b>OUC Account Code</b></label>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>OUC Account Code</mat-label>
+                        <input matInput placeholder="Enter ouc account code" formControlName="ouccode" name="ouccode"
+                            id="ouccode" />
+                    </mat-form-field>
+                    <div class="alert alert-danger" *ngIf="ouccode.invalid && (ouccode.touched && ouccode.dirty)">
+                        <span *ngIf="ouccode.errors.required">
+                            OUC account code is <strong>required</strong>
+                        </span>
+                    </div>
+                    <!-- <input type="text" class="form-control" [(ngModel)]="ouccode" name="ouccode" id="ouccode"> -->
+                </div>
+                <div class="email-div col-sm-4" style="display: grid">
+                    <label for=""><b>Email Address</b></label>
+                    <mat-form-field appearance="legacy">
+                        <mat-label>Email Address</mat-label>
+                        <input matInput placeholder="Enter email address" formControlName="emailAddress"
+                            name="emailAddress" id="emailAddress" />
+                    </mat-form-field>
+                    <div class="alert alert-danger"
+                        *ngIf="emailAddress.invalid && (emailAddress.touched && emailAddress.dirty)">
+                        <span *ngIf="emailAddress.errors.required">
+                            Email address is <strong>required</strong>
+                        </span>
+                        <span *ngIf="emailAddress.errors.email">
+                            Email address format is <strong>incorrect</strong>
+                        </span>
+                    </div>
+                    <!-- <input type="email" class="form-control" [(ngModel)]="emailAddress"  name="emailAddress" id="emailAddress"> -->
+                </div>
+            </div>
+            <div class="row button-area mt-2">
+                <span class="col-sm-4"></span>
+                <span class="col-sm-4"></span>
+                <div class="col-sm-4 submit-div">
+                    <button class="btn rivus-btn" id="btnSubmit" [disabled]="!customerForm.valid">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

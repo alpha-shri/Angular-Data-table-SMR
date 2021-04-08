@@ -1,0 +1,21 @@
+.btn-rivus-color{
+    background-color: #417E9A !important;
+    color: #fff;
+}
+
+.btn-rivus-color:hover{
+    background-color: #95adb1 !important;
+    color: #fff;
+}
+
+.example-card{
+    width: 100%;
+}
+
+.edit-customer-div{
+    display: grid;
+}
+
+matInput{
+    width: 60%;
+}

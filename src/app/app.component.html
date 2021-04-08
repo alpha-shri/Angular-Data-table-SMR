@@ -1,3 +1,8 @@
-<app-dashboard></app-dashboard>
-
-
+<div class="container">
+    <mat-toolbar>
+      <button mat-button id="addAccount" routerLinkActive="mat-button-active" routerLink="addacc">Add Account</button>
+      <button mat-button id="ViewAccount" routerLinkActive="mat-button-active" routerLink="viewacc">View Account</button>
+      <button mat-button id="linkSmr" routerLinkActive="mat-button-active" routerLink="linkacc">Link SMR User</button>
+  </mat-toolbar> 
+<router-outlet></router-outlet>
+</div>

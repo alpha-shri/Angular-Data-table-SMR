@@ -1,0 +1,33 @@
+.delete-customer-div{
+    display: grid;
+}
+
+.btn-rivus-color{
+    background-color: #417E9A !important;
+    color: #fff;
+}
+
+.btn-rivus-color:hover{
+    background-color: #95adb1 !important;
+    color: #fff;
+}
+
+
+matInput{
+    width: 60%;
+}
+
+
+.material-icons{
+  font-size: 22px !important;
+}
+
+.icon-pack{
+    cursor: pointer
+  }
+
+.icon-pack:hover {
+  background-color: #417E9A;
+  color: #fff;
+  cursor: pointer
+}

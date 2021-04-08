@@ -27,17 +27,7 @@
             <!-- Email Address Column -->
             <ng-container matColumnDef="emailAddress">
                 <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Email Address</b> </th>
-                <td mat-cell *matCellDef="let element" >  
-                    <span id="{{ 'EMAIL_'+element.headaccountcode+element.ouccode }}">{{element.emailAddress}}</span>
-                    <mat-form-field class="mat-form-field-email" appearance="legacy" hidden
-                     id="{{ 'FIELD_'+element.headaccountcode+element.ouccode }}">
-                        <mat-label>Update email address</mat-label>
-                        <input matInput
-                         value="{{ element.emailAddress }}"
-                         id="{{ 'SEARCH_'+element.headaccountcode+element.ouccode }}"/>
-                    </mat-form-field>                              
-
-                </td>
+                <td mat-cell *matCellDef="let element" >{{element.emailAddress}}</td>
             </ng-container>
 
 
@@ -46,25 +36,14 @@
                 <th mat-header-cell *matHeaderCellDef mat-sort-header><b>Action</b> </th>
                 <td mat-cell *matCellDef="let element">
                     <span class="mr-4 edit-icon" [hidden]="hiddenEdit" 
-                        id="{{ 'EDIT_'+ element.headaccountcode }}"
-                        (click)="editAction(element, $event)">
-                        <mat-icon id="{{ 'EDIT_'+ element.headaccountcode }}" aria-hidden="false" title="Edit">edit</mat-icon>
-                    </span>
-                    <span class="mr-4 check-icon" [hidden]="hiddenUpdate"
-                        id="{{ 'CHECK_'+ element.headaccountcode }}"
-                         (click)="updateAction(element, $event)">
-                        <mat-icon title="Update">check_circle</mat-icon>
+                        (click)="editOpenDialog(element)">
+                        <mat-icon aria-hidden="false" title="Edit">edit</mat-icon>
                     </span>
                     <span class="delete-icon mr-4" [hidden]="hiddenDelete"
                           id="{{ 'DELETE_'+ element.headaccountcode }}"
                           (click)="deleteAction(element, $event)">
                         <mat-icon aria-hidden="false" title="Delete">delete_forever</mat-icon>
-                    </span>
-                    <span class="close-icon" [hidden]="hiddenClose"
-                         id="{{ 'CLOSE_'+ element.headaccountcode }}"
-                         (click)="closeAction(element,$event)">
-                        <mat-icon aria-hidden="false" title="Close">close</mat-icon>
-                    </span>
+                    </span>                 
                 </td>
             </ng-container>
 
