@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { CustomerService } from 'src/app/services/customer.service';
 
 @Component({
@@ -15,6 +16,7 @@ export class DeleteDialogComponent implements OnInit {
   
   constructor(
     private service: CustomerService,
+    private _snackBar: MatSnackBar,
     private dialogRef: MatDialogRef<DeleteDialogComponent>,
     @Inject(MAT_DIALOG_DATA) data) {
                   this.headaccountcode = data.headaccountcode;
@@ -30,6 +32,10 @@ export class DeleteDialogComponent implements OnInit {
     this.service.deleteSmrCustomerService(this.headaccountcode, this.ouccode)
     .subscribe( data => {
       console.log(data, "");
+      this._snackBar.open('Record removed successfully', "", {
+        duration: 3000,
+        panelClass: ['mat-toolbar', 'mat-primary']
+      });
       //* Refresh Table after successful update
       this.dialogRef.afterClosed()
           .subscribe( result => {

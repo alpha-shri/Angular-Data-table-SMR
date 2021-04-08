@@ -4,8 +4,8 @@ import {
   FormBuilder,
   Validators,
 } from '@angular/forms';
-import { ToastrService } from 'ngx-toastr';
 import { CustomerService } from 'src/app/services/customer.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 
 @Component({
@@ -20,8 +20,8 @@ export class AddAccountComponent implements OnInit {
   
   constructor(
     private service: CustomerService,
-    private toastr: ToastrService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private _snackBar: MatSnackBar
   ) {}
 
   customerForm = this.fb.group({
@@ -46,9 +46,12 @@ export class AddAccountComponent implements OnInit {
 
     this.service.addSmrCustomerService(this.customerForm.value)
         .subscribe( data => {
+          this._snackBar.open('Customer onboarding successful', "", {
+            duration: 4000,
+            panelClass: ['mat-toolbar', 'mat-primary']
+          });
           this.customerForm.reset();
           this.service.fetchAllCustomerService();
-          this.toastr.success("",data);
         });
 
     //? Access the particular value

@@ -10,7 +10,6 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CustomerService } from './services/customer.service';
 import {MatTabsModule} from '@angular/material/tabs';
-import { ToastrModule } from 'ngx-toastr';
 import {MatTableModule} from '@angular/material/table';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatFormFieldModule} from '@angular/material/form-field';
@@ -50,7 +49,6 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     FormsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ToastrModule.forRoot(),
     MatTabsModule,
     MatButtonModule,
     MatToolbarModule,

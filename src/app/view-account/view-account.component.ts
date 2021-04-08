@@ -1,7 +1,6 @@
 import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { Customer } from 'src/app/models/Customer';
 
-import { ToastrService } from 'ngx-toastr';
 import { CustomerService } from 'src/app/services/customer.service';
 import { MatTableDataSource } from '@angular/material/table';
 import {MatPaginator} from '@angular/material/paginator';
@@ -38,7 +37,6 @@ export class ViewAccountComponent implements OnInit {
   @ViewChild(MatSort) sort: MatSort;
 
   constructor(private service: CustomerService,
-              private toastr: ToastrService,
               public dialog: MatDialog) { }
 
   ngOnInit() {
